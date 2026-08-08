@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Adaptohabit - Dashboard</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <link href = "https://fonts.googleapis.com/css2?family=inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <!--Top navigation bar-->
+    <header class="navbar">
+        <div class = "logo">Adapto<span>habit</span></div>
+        <div class = "user-profile">
+            <span class = "user - name ">Welcome back , User ! </span>
+        </div>
+    </header>
+    <!--main container-->
+    <header class="container">
+        <section class = "dashboard-header">
+            <div>
+             <h1>Daily Habits</h1>
+             <p class = "subtitle">Small steps everyday lead to massive results.</p>
+            </div>
+            <button class = "btn-primary" id="open-modal-btn">+ Add New Habit</button>
+        </section>        
+
+        <!--Progress overview-->
+        <section class = "progress-card">
+            <div class = "progress-info">
+                <span> Today's Progress </span>
+                <span id="progress-percentage">0%</span>    
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </section>
+
+        <!--main grid-->
+       <section class="habit-grid" id="habit-grid">
+        <!--sample habit item 1-->
+        <div class="habit-card">
+            <div class="habit-info">
+                <h3>Drink 2L Water</h3>
+                <p class="habit-category">health</p>
+            </div>
+            <div class="habit-actions">
+                <span class="streak">3 day streak</span>
+                <button class="btn-check"onclick="toggleHabit(this)">&#10003;</button>
+            </div>
+        </div>
+       </section>
+
+    </header>
+</body>
+</html>
