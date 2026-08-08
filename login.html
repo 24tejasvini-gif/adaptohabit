@@ -4,17 +4,18 @@
         <title>
             AdaptoHabit - Welcome
         </title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body class = "auth-body">
-        <div classs = "auth-container ">
+        <div class = "auth-container ">
             <div class ="auth-header">
                 <h1 class="logo">Adapto<span>Habit</span></h1>
                 <p class="auth-subtitle">Adapt your daily routine , Shape your future</p>
             </div>
 
             <div class = "auth-tabs">
-                <button class="tab-btn active" id="login-tab" onclick="switchForm(login)">Login</button> 
-                <button class="tab-btn" id="register-tab" onclick="switchForm(login)">Register</button>
+                <button class="tab-btn active" id="login-tab" onclick="switchForm('login')">Login</button> 
+                <button class="tab-btn" id="register-tab" onclick="switchForm('register')">Register</button>
             </div>
 
             <!--login-form-->
@@ -23,17 +24,29 @@
                 <label for="login-email">Email Address</label>
                 <input type="email" id="login-email" placeholder="email" required>
             </div>
-
-            <button type="submit" class="btn-orimary auth-submit-btn">Sign-In</button>
+        <div class="form-group">
+            <label for ="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="password" required>
+        </div>
+            <button type="submit" class="btn-primary auth-submit-btn">Sign-In</button>
         </form>
         
         <!--Register form-->
-        
-        
-        </form>
-        
-        
-        
-        </div>
+        <form id="register-form" class="auth-form">
+            <div class="form-group">
+                <label for="user-name">Full Name</label>
+                <input type="text" id="user-name" placeholder="user name" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email Address</label>
+                <input type="email" id="register-email" placeholder="email" required>
+            <div class="form-group">
+                <label for="register-password">Password</label>                 
+                  <input type="password" id="password" placeholder="password" required>
+            </div>
+            <button type="submit" calss="btn-primary auth-submit-btn">Register</button>
+            </div>
+            </form>
+         <script src="script.js"></script>  
     </body>
 </html>

@@ -28,6 +28,25 @@ function updateProgress() {
 
 }
 
+document.addEventListener('DOMContentLoaded',() => {
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+
+    loginTab.addEventListener('click',() => {
+        loginForm.classList.add('active-form');
+        registerForm.classList.remove('active-form');
+        loginTab.classList.add('active');
+        registerTab.classList.remove('active');
+    });
+        registerTab.addEventListener('click',() => {
+         loginForm.classList.remove('active-form');
+        registerForm.classList.add('active-form');
+        loginTab.classList.remove('active');
+        registerTab.classList.add('active');
+        });
+    });
 //inital progress calculation
 updateProgress();
 
